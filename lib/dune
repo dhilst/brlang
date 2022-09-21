@@ -1,0 +1,7 @@
+(menhir
+  (modules parser))
+
+(library
+ (preprocess (pps ppx_deriving.show ppx_deriving.ord sedlex.ppx))
+ (libraries sedlex menhirLib)
+ (name brlang))
